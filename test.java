@@ -5,7 +5,7 @@ public class test{
 		double qhd, phd, qs, ps, qse, pse, ph, qh, qc, pc, qo, po, total;
 		phd = ps = pse = ph = pc = po = total = 0.0;
 		int code;
-		int ans;
+		char ans = 'Y';
 		System.out.println("   item        |   Code       | Price ");
 		System.out.println("Hot dog        |   100        | R$1,20");
 		System.out.println("Sandwich       |   101        | R$1,30");
@@ -68,9 +68,9 @@ public class test{
 			default:
 			break;
 		}
-		System.out.println("Do you want to order something more? For Yes, write 1");
-		ans = scan.nextInt();
-		}while(ans == 1);
+		System.out.println("Do you want to order something more? Answer(Y/N)");
+		ans = scan.next().charAt(0);
+		}while(ans == 'Y');
 		System.out.println(" The total is " + total);
 	}
 }
